@@ -12,55 +12,59 @@ import headerImg from "../public/assets/headerImg.jpg";
 import middleImg from "../public/assets/middleImg.jpg";
 import { icons } from "../public/assets/icons/Icons";
 
+import brique from "../public/assets/projetsImg/casse_brique.png";
+import eshop from "../public/assets/projetsImg/eshop.png";
+import memory from "../public/assets/projetsImg/memory.png";
+import smoke from "../public/assets/projetsImg/smoke.jpg";
+import snake from "../public/assets/projetsImg/snake.png";
+import space from "../public/assets/projetsImg/space.jpg";
 
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
+    const imgHeadRef = useRef(null);
 
- 
+    useEffect(() => {
+
+        gsap.to(imgHeadRef.current, {            
+            scrollTrigger : {
+                trigger: imgHeadRef.current,
+                markers: true,
+                scrub:true
+            },
+            y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+            ease: "none"
+        })
+    })
+
+
 
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
-    const [span, setSpan] = useState('')
+    const [span, setSpan] = useState("");
 
+    const handleForm = (e) => {
+        e.preventDefault();
+        console.log("name", name);
+        console.log("mail", mail);
+        console.log("message", message);
 
-    const handleForm = e => {
-        e.preventDefault()
-        console.log('name', name);
-        console.log('mail', mail);
-        console.log('message', message);
-       
-        setSpan('Votre message a bien été envoyé')
+        setSpan("Votre message a bien été envoyé");
 
         setTimeout(() => {
-            setName('')
-            setMail('')
-            setMessage('')
-            setSpan('')
-        },1500)
+            setName("");
+            setMail("");
+            setMessage("");
+            setSpan("");
+        }, 1500);
+    };
 
-    }
-
-    const handleSubmit = e => {
-        e.preventDefault()
-    }
-
-    const rellaxRef = useRef();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    };
 
    
-
-    useEffect(() => {
-        new Rellax(rellaxRef.current, {
-            speed: 0,
-            center: false,
-            wrapper: null,
-            round: true,
-            vertical: true,
-            horizontal: false,
-        });
-    }, [rellaxRef]);
-
     return (
         <div className={css.globalContainer}>
             <Head>
@@ -76,9 +80,7 @@ export default function Home() {
                 {/* header */}
 
                 <div className={css.headerContainer}>
-                    <div 
-                    // ref={rellaxRef}
-                     className={css.imgHeader}></div>
+                    <div  className={css.imgHeader}></div>
 
                     {/* navbar */}
 
@@ -97,90 +99,193 @@ export default function Home() {
                 {/* section projet */}
                 <div className={css.projetContainer}>
                     <h1 className={css.projetTitle}>projets.</h1>
+
                     <div className={css.projetGrid}>
-                        <div className={css.projetCard}>Projet 1</div>
-                        <div className={css.projetCard}>Projet 2</div>
-                        <div className={css.projetCard}>Projet 3</div>
-                        <div className={css.projetCard}>Projet 4</div>
-                        <div className={css.projetCard}>Projet 5</div>
-                        <div className={css.projetCard}>Projet 6</div>
+                        <div className={css.projetCard}>
+                            {/* casse brique */}
+                            <Link
+                                href={"https://casse-brique.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={brique}
+                                        width={1280}
+                                        height={800}
+                                        alt="jeux du casse brique"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        {/* eshop */}
+                        <div className={css.projetCard}>
+                            <Link
+                                href={"https://eshop-nextjs-one.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={eshop}
+                                        width={1280}
+                                        height={800}
+                                        alt="e-commerce Amazoun"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className={css.projetCard}>
+                            <Link
+                                href={"https://memory-card-teal.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={memory}
+                                        width={1280}
+                                        height={800}
+                                        alt="jeux de mémoire"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className={css.projetCard}>
+                            <Link
+                                href={"https://japan-smoke-spot.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={smoke}
+                                        width={1280}
+                                        height={800}
+                                        alt="smoking spots on map"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className={css.projetCard}>
+                            <Link
+                                href={"https://jeux-snake-js.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={snake}
+                                        width={1280}
+                                        height={800}
+                                        alt="snake game"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                        <div className={css.projetCard}>
+                            <Link
+                                href={"https://space-invaders-js.vercel.app/"}
+                                target="_blank"
+                                passHref
+                            >
+                                <a target="_blank">
+                                    <Image
+                                        src={space}
+                                        width={1280}
+                                        height={800}
+                                        alt="Space Invaders"
+                                    />
+                                </a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
             {/* middle bar */}
             <div className={css.middleBar}>
-                <div 
-                // ref={rellaxRef}
-                 className={css.middleImg}></div>
+                <div
+                   
+                    className={css.middleImg}
+                    ref={imgHeadRef}
+                ></div>
             </div>
             {/* a propos */}
             <section className={css.proposContainer}>
                 <h1 className={css.proposTitle}>A propos.</h1>
-                <p className={css.proposTxt}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sit dolorem nisi aperiam aut mollitia nostrum a consequatur quam! Suscipit quae quam blanditiis molestiae accusamus. Dignissimos, hic, magnam repudiandae facere perspiciatis atque, qui ullam culpa suscipit numquam debitis amet quas earum odio et ea beatae sed iusto dolorem ex deserunt!</p>
+                <p className={css.proposTxt}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Exercitationem sit dolorem nisi aperiam aut mollitia nostrum
+                    a consequatur quam! Suscipit quae quam blanditiis molestiae
+                    accusamus. Dignissimos, hic, magnam repudiandae facere
+                    perspiciatis atque, qui ullam culpa suscipit numquam debitis
+                    amet quas earum odio et ea beatae sed iusto dolorem ex
+                    deserunt!
+                </p>
 
                 <div className={css.iconContainer}>
-                    {icons.map((e) => (                       
+                    {icons.map((e) => (
                         <div className={css.iconItem} key={e.id}>
                             <Image
                                 src={e.url}
-                               width={100}
-                               height={100}
-                               alt={e.name}
+                                width={100}
+                                height={100}
+                                alt={e.name}
                             />
                         </div>
                     ))}
                 </div>
-
             </section>
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
-                <div 
-                // ref={rellaxRef}
-                 className={css.bottomImg}></div>
+                <div
+                    // ref={rellaxRef}
+                    className={css.bottomImg}
+                ></div>
             </div>
 
             {/* CONTACT */}
 
             <div className={css.contactContainer}>
-            <h1 className={css.contactTitle}>contact.</h1>
-                <form 
-                onSubmit={handleForm}
-                className={css.form}>
-
-                    <input 
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                    className={css.inputSmall} 
-                    type="text" 
-                    required 
-                    placeholder="Enter your name" 
-                    id="name" />
-                    <input 
-
-                     onChange={(e) => setMail(e.target.value)}
-                     value={mail}
-                    className={css.inputSmall} 
-                    type="email" 
-                    required 
-                    placeholder="Enter your e-mail" 
-                    id="mail" />
-                    <textarea 
-                     onChange={(e) => setMessage(e.target.value)}
-                     value={message}
-                    className={css.inputBig} 
-                    type="text"  
-                    required 
-                    placeholder="Message" 
-                    id="message" />
+                <h1 className={css.contactTitle}>contact.</h1>
+                <form onSubmit={handleForm} className={css.form}>
+                    <input
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        className={css.inputSmall}
+                        type="text"
+                        required
+                        placeholder="Enter your name"
+                        id="name"
+                    />
+                    <input
+                        onChange={(e) => setMail(e.target.value)}
+                        value={mail}
+                        className={css.inputSmall}
+                        type="email"
+                        required
+                        placeholder="Enter your e-mail"
+                        id="mail"
+                    />
+                    <textarea
+                        onChange={(e) => setMessage(e.target.value)}
+                        value={message}
+                        className={css.inputBig}
+                        type="text"
+                        required
+                        placeholder="Message"
+                        id="message"
+                    />
                     <span className={css.formSpan}> {span}</span>
                     <button
-                    // onSubmit={handleSubmit}
-                     className={css.btnSubmit} >Submit</button>
+                        // onSubmit={handleSubmit}
+                        className={css.btnSubmit}
+                    >
+                        Submit
+                    </button>
                 </form>
-
             </div>
-
         </div>
     );
 }
