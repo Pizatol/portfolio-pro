@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Rellax from "rellax";
 
+import Propos from "../components/Propos";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -22,23 +24,50 @@ import space from "../public/assets/projetsImg/space.jpg";
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
-    const imgHeadRef = useRef(null);
+    const clickTest = () => {
+        console.log("ok button");
+    };
+
+    // SCROLL TRIGGERS
+    const imgHeadRef = useRef();
+    const projetTitleRef = useRef(null);
+    const projet_bottom_border_Ref = useRef(null);
 
     useEffect(() => {
+        gsap.fromTo(
+            projetTitleRef.current,
+            { opacity: 0, x: -300 },
 
-        gsap.to(imgHeadRef.current, {            
-            scrollTrigger : {
-                trigger: imgHeadRef.current,
-                markers: true,
-                scrub:true
-            },
-            y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-            ease: "none"
-        })
-    })
+            {
+                scrollTrigger: {
+                    trigger: projetTitleRef.current,
+                    start: "top 75%",
+                    toggleActions: "play none none none",
+                },
+                x: 0,
+                opacity: 1,
+                delay: 0,
+            }
+        );
+        gsap.fromTo(
+            projet_bottom_border_Ref.current,
+            { opacity: 0, x: -200 },
 
+            {
+                scrollTrigger: {
+                    trigger: projet_bottom_border_Ref.current,
+                    start: "top 75%",
+                    toggleActions: "play none none none",
+                },
+                x: 0,
+                opacity: 1,
+                delay: 0.5,
+                // duration : .75
+            }
+        );
+    }, []);
 
-
+    // MAil
     const [name, setName] = useState("");
     const [mail, setMail] = useState("");
     const [message, setMessage] = useState("");
@@ -64,7 +93,6 @@ export default function Home() {
         e.preventDefault();
     };
 
-   
     return (
         <div className={css.globalContainer}>
             <Head>
@@ -80,25 +108,77 @@ export default function Home() {
                 {/* header */}
 
                 <div className={css.headerContainer}>
-                    <div  className={css.imgHeader}></div>
+                    <div className={css.imgHeader}></div>
 
                     {/* navbar */}
 
                     <div className={css.navbarContainer}>
                         <div className={css.title}>GB</div>
                         <div className={css.navbar}>
-                            <button>projets.</button>
-                            <button>à propos.</button>
-                            <button>contact.</button>
+                            <div className={css.glitch_bloc}>
+                                <a href="#projets"></a>
+                                <button
+                                    onClick={clickTest}
+                                    className={css.invisible_btn}
+                                >
+                                    projets.
+                                </button>
+                                <p className={css.glitched_anim}>projets</p>
+                                <p className={css.glitched_anim}>projets</p>
+                                <p className={css.glitched_anim}>projets</p>
+                            </div>
+                            <div className={css.glitch_bloc}>
+                                <a></a>
+                                <button className={css.invisible_btn}>
+                                    à propos
+                                </button>
+                                <p className={css.glitched_anim}>à propos</p>
+                                <p className={css.glitched_anim}>à propos</p>
+                                <p className={css.glitched_anim}>à propos</p>
+                            </div>
+                            <div className={css.glitch_bloc}>
+                                <button
+                                    onClick={clickTest}
+                                    className={css.invisible_btn}
+                                >
+                                    contact.
+                                </button>
+                                <p className={css.glitched_anim}>contact</p>
+                                <p className={css.glitched_anim}>contact</p>
+                                <p className={css.glitched_anim}>contact</p>
+                            </div>
+
+                            {/* <div>
+                                <button>à propos.</button>
+                            </div>
+                            <div>
+                                <button>contact.</button>
+                            </div> */}
                         </div>
                     </div>
                 </div>
             </header>
 
+            {/* a propos */}
+            <Propos />
+
+            {/* middle bar */}
+            <div className={css.middleBar}>
+                <div className={css.middleImg}></div>
+            </div>
+
+            {/* section projet */}
             <section>
-                {/* section projet */}
                 <div className={css.projetContainer}>
-                    <h1 className={css.projetTitle}>projets.</h1>
+                    <div className={css.projet_title_container}>
+                        <h1 ref={projetTitleRef} className={css.projetTitle}>
+                            projets
+                        </h1>
+                        <div
+                            ref={projet_bottom_border_Ref}
+                            className={css.projet_bottom_border}
+                        ></div>
+                    </div>
 
                     <div className={css.projetGrid}>
                         <div className={css.projetCard}>
@@ -202,53 +282,19 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            {/* middle bar */}
-            <div className={css.middleBar}>
-                <div
-                   
-                    className={css.middleImg}
-                    ref={imgHeadRef}
-                ></div>
-            </div>
-            {/* a propos */}
-            <section className={css.proposContainer}>
-                <h1 className={css.proposTitle}>A propos.</h1>
-                <p className={css.proposTxt}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem sit dolorem nisi aperiam aut mollitia nostrum
-                    a consequatur quam! Suscipit quae quam blanditiis molestiae
-                    accusamus. Dignissimos, hic, magnam repudiandae facere
-                    perspiciatis atque, qui ullam culpa suscipit numquam debitis
-                    amet quas earum odio et ea beatae sed iusto dolorem ex
-                    deserunt!
-                </p>
 
-                <div className={css.iconContainer}>
-                    {icons.map((e) => (
-                        <div className={css.iconItem} key={e.id}>
-                            <Image
-                                src={e.url}
-                                width={100}
-                                height={100}
-                                alt={e.name}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </section>
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
-                <div
-                    // ref={rellaxRef}
-                    className={css.bottomImg}
-                ></div>
+                <div className={css.bottomImg}></div>
             </div>
 
             {/* CONTACT */}
 
             <div className={css.contactContainer}>
-                <h1 className={css.contactTitle}>contact.</h1>
+                <h1 id="contact" className={css.contactTitle}>
+                    contact.
+                </h1>
                 <form onSubmit={handleForm} className={css.form}>
                     <input
                         onChange={(e) => setName(e.target.value)}
