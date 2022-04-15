@@ -195,6 +195,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[0].name}
                     />
+                    <p className={css.icon_subtitle_item}>html</p>
                 </div>
                 <div ref={imgRef2} className={css.icon_item}>
                     <Image
@@ -203,6 +204,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[1].name}
                     />
+                     <p className={css.icon_subtitle_item}>css</p>
                 </div>
 
                 <div ref={imgRef3} className={css.icon_item}>
@@ -212,6 +214,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[2].name}
                     />
+                     <p className={css.icon_subtitle_item}>javascript</p>
                 </div>
 
                 <div ref={imgRef4} className={css.icon_item}>
@@ -221,6 +224,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[3].name}
                     />
+                     <p className={css.icon_subtitle_item}>react js</p>
                 </div>
 
                 <div ref={imgRef5} className={css.icon_item}>
@@ -230,6 +234,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[4].name}
                     />
+                     <p className={css.icon_subtitle_item}>next js</p>
                 </div>
 
                 <div ref={imgRef6} className={css.icon_item}>
@@ -239,6 +244,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[5].name}
                     />
+                     <p className={css.icon_subtitle_item}>firebase</p>
                 </div>
 
                 <div ref={imgRef7} className={css.icon_item}>
@@ -248,6 +254,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[6].name}
                     />
+                     <p className={css.icon_subtitle_item}>sass</p>
                 </div>
 
                 <div ref={imgRef8} className={css.icon_item}>
@@ -257,6 +264,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[7].name}
                     />
+                     <p  className={css.icon_subtitle_item}>greensock</p>
                 </div>
             </div>
         </div>

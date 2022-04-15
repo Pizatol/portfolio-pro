@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import headerImg from "../public/assets/headerImg.jpg";
 import middleImg from "../public/assets/middleImg.jpg";
+import bottomImg from "../public/assets/bottomImg.jpg";
 import { icons } from "../public/assets/icons/Icons";
 
 import brique from "../public/assets/projetsImg/casse_brique.png";
@@ -113,63 +114,41 @@ export default function Home() {
                     {/* navbar */}
 
                     <div className={css.navbarContainer}>
-                        <div className={css.title}>GB</div>
-                        <div className={css.navbar}>
-                            <div className={css.glitch_bloc}>
-                                <a href="#projets"></a>
-                                <button
-                                    onClick={clickTest}
-                                    className={css.invisible_btn}
-                                >
-                                    projets.
-                                </button>
-                                <p className={css.glitched_anim}>projets</p>
-                                <p className={css.glitched_anim}>projets</p>
-                                <p className={css.glitched_anim}>projets</p>
-                            </div>
-                            <div className={css.glitch_bloc}>
-                                <a></a>
-                                <button className={css.invisible_btn}>
-                                    à propos
-                                </button>
-                                <p className={css.glitched_anim}>à propos</p>
-                                <p className={css.glitched_anim}>à propos</p>
-                                <p className={css.glitched_anim}>à propos</p>
-                            </div>
-                            <div className={css.glitch_bloc}>
-                                <button
-                                    onClick={clickTest}
-                                    className={css.invisible_btn}
-                                >
-                                    contact.
-                                </button>
-                                <p className={css.glitched_anim}>contact</p>
-                                <p className={css.glitched_anim}>contact</p>
-                                <p className={css.glitched_anim}>contact</p>
-                            </div>
+                        <div id="top" className={css.title}>GB</div>
 
-                            {/* <div>
-                                <button>à propos.</button>
-                            </div>
-                            <div>
-                                <button>contact.</button>
-                            </div> */}
+                        <div className={css.navbar}>
+                            <a href="#projets" >projets.</a>
+
+                            <a href="#propos">à propos</a>
+
+                            <a href="#contact">contact.</a>
                         </div>
                     </div>
                 </div>
             </header>
 
             {/* a propos */}
-            <Propos />
+            <div id="propos">
+
+            <Propos  />
+            </div>
 
             {/* middle bar */}
             <div className={css.middleBar}>
-                <div className={css.middleImg}></div>
+                <div className={css.middleImg}>
+                    <Image
+                        src={middleImg}
+                        width={4272 }
+                        height={1529 }
+                        alt="image milieu"
+                        layout="responsive"
+                    />
+                </div>
             </div>
 
             {/* section projet */}
             <section>
-                <div className={css.projetContainer}>
+                <div id="projets" className={css.projetContainer}>
                     <div className={css.projet_title_container}>
                         <h1 ref={projetTitleRef} className={css.projetTitle}>
                             projets
@@ -286,12 +265,20 @@ export default function Home() {
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
-                <div className={css.bottomImg}></div>
+                <div className={css.bottomImg}>
+                    <Image
+                        src={bottomImg}
+                        width={2395}
+                        height={970}
+                        alt="image bottom"
+                        layout="fixed"
+                    />
+                </div>
             </div>
 
             {/* CONTACT */}
 
-            <div className={css.contactContainer}>
+            <div id="contact" className={css.contactContainer}>
                 <h1 id="contact" className={css.contactTitle}>
                     contact.
                 </h1>
@@ -331,6 +318,7 @@ export default function Home() {
                         Submit
                     </button>
                 </form>
+                <a href="#top">Remonter la page</a>
             </div>
         </div>
     );

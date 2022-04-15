@@ -60,10 +60,30 @@
   margin: 30px auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: auto;
 }
 
 .icon_item {
-  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
   margin: 30px;
+}
+
+.icon_subtitle_item {
+  font-family: var(--raleway);
+  font-weight: 500;
+  font-size: 19px;
 }
 /*# sourceMappingURL=Propos.module.css.map */

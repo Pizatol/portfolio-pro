@@ -45,9 +45,19 @@
     align-items: center;
     margin: 30px auto;
     flex-wrap: wrap;
+	 height: auto;
 }
 
 .icon_item {
-	height: 120px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
 	margin: 30px;
+}
+.icon_subtitle_item {
+	font-family: var(--raleway);
+	font-weight: 500;
+	font-size: 19px;
 }
