@@ -6,94 +6,30 @@ import Link from "next/link";
 import Rellax from "rellax";
 
 import Propos from "../components/Propos";
+import Projets from "../components/Projets";
+import Contact from "../components/Contact";
+
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import headerImg from "../public/assets/headerImg.jpg";
+
 import middleImg from "../public/assets/middleImg.jpg";
 import bottomImg from "../public/assets/bottomImg.jpg";
-import { icons } from "../public/assets/icons/Icons";
 
-import brique from "../public/assets/projetsImg/casse_brique.png";
-import eshop from "../public/assets/projetsImg/eshop.png";
-import memory from "../public/assets/projetsImg/memory.png";
-import smoke from "../public/assets/projetsImg/smoke.jpg";
-import snake from "../public/assets/projetsImg/snake.png";
-import space from "../public/assets/projetsImg/space.jpg";
+
+
 
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
-    const clickTest = () => {
-        console.log("ok button");
-    };
-
+   
     // SCROLL TRIGGERS
     const imgHeadRef = useRef();
-    const projetTitleRef = useRef(null);
-    const projet_bottom_border_Ref = useRef(null);
+ 
 
-    useEffect(() => {
-        gsap.fromTo(
-            projetTitleRef.current,
-            { opacity: 0, x: -300 },
 
-            {
-                scrollTrigger: {
-                    trigger: projetTitleRef.current,
-                    start: "top 75%",
-                    toggleActions: "play none none none",
-                },
-                x: 0,
-                opacity: 1,
-                delay: 0,
-            }
-        );
-        gsap.fromTo(
-            projet_bottom_border_Ref.current,
-            { opacity: 0, x: -200 },
-
-            {
-                scrollTrigger: {
-                    trigger: projet_bottom_border_Ref.current,
-                    start: "top 75%",
-                    toggleActions: "play none none none",
-                },
-                x: 0,
-                opacity: 1,
-                delay: 0.5,
-                // duration : .75
-            }
-        );
-    }, []);
-
-    // MAil
-    const [name, setName] = useState("");
-    const [mail, setMail] = useState("");
-    const [message, setMessage] = useState("");
-    const [span, setSpan] = useState("");
-
-    const handleForm = (e) => {
-        e.preventDefault();
-        console.log("name", name);
-        console.log("mail", mail);
-        console.log("message", message);
-
-        setSpan("Votre message a bien été envoyé");
-
-        setTimeout(() => {
-            setName("");
-            setMail("");
-            setMessage("");
-            setSpan("");
-        }, 1500);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
-
+  
     return (
         <div className={css.globalContainer}>
             <Head>
@@ -127,9 +63,9 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* a propos */}
+            {/* PROPOS */}
+            
             <div id="propos">
-
             <Propos  />
             </div>
 
@@ -146,122 +82,13 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* section projet */}
-            <section>
-                <div id="projets" className={css.projetContainer}>
-                    <div className={css.projet_title_container}>
-                        <h1 ref={projetTitleRef} className={css.projetTitle}>
-                            projets
-                        </h1>
-                        <div
-                            ref={projet_bottom_border_Ref}
-                            className={css.projet_bottom_border}
-                        ></div>
-                    </div>
+        {/* PROJETS */}
+        <div id="projets">
 
-                    <div className={css.projetGrid}>
-                        <div className={css.projetCard}>
-                            {/* casse brique */}
-                            <Link
-                                href={"https://casse-brique.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={brique}
-                                        width={1280}
-                                        height={800}
-                                        alt="jeux du casse brique"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        {/* eshop */}
-                        <div className={css.projetCard}>
-                            <Link
-                                href={"https://eshop-nextjs-one.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={eshop}
-                                        width={1280}
-                                        height={800}
-                                        alt="e-commerce Amazoun"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <div className={css.projetCard}>
-                            <Link
-                                href={"https://memory-card-teal.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={memory}
-                                        width={1280}
-                                        height={800}
-                                        alt="jeux de mémoire"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <div className={css.projetCard}>
-                            <Link
-                                href={"https://japan-smoke-spot.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={smoke}
-                                        width={1280}
-                                        height={800}
-                                        alt="smoking spots on map"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <div className={css.projetCard}>
-                            <Link
-                                href={"https://jeux-snake-js.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={snake}
-                                        width={1280}
-                                        height={800}
-                                        alt="snake game"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <div className={css.projetCard}>
-                            <Link
-                                href={"https://space-invaders-js.vercel.app/"}
-                                target="_blank"
-                                passHref
-                            >
-                                <a target="_blank">
-                                    <Image
-                                        src={space}
-                                        width={1280}
-                                        height={800}
-                                        alt="Space Invaders"
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <Projets/>
+        </div>
 
+       
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
@@ -277,49 +104,9 @@ export default function Home() {
             </div>
 
             {/* CONTACT */}
+            <Contact/>
 
-            <div id="contact" className={css.contactContainer}>
-                <h1 id="contact" className={css.contactTitle}>
-                    contact.
-                </h1>
-                <form onSubmit={handleForm} className={css.form}>
-                    <input
-                        onChange={(e) => setName(e.target.value)}
-                        value={name}
-                        className={css.inputSmall}
-                        type="text"
-                        required
-                        placeholder="Enter your name"
-                        id="name"
-                    />
-                    <input
-                        onChange={(e) => setMail(e.target.value)}
-                        value={mail}
-                        className={css.inputSmall}
-                        type="email"
-                        required
-                        placeholder="Enter your e-mail"
-                        id="mail"
-                    />
-                    <textarea
-                        onChange={(e) => setMessage(e.target.value)}
-                        value={message}
-                        className={css.inputBig}
-                        type="text"
-                        required
-                        placeholder="Message"
-                        id="message"
-                    />
-                    <span className={css.formSpan}> {span}</span>
-                    <button
-                        // onSubmit={handleSubmit}
-                        className={css.btnSubmit}
-                    >
-                        Submit
-                    </button>
-                </form>
-                <a href="#top">Remonter la page</a>
-            </div>
+          
         </div>
     );
 }

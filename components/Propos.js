@@ -6,11 +6,18 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import { icons } from "../public/assets/icons/Icons";
 
+import QualityIcon from "../components/QualityIcon";
+import { qualityIcons } from "../public/assets/icons/qualites/qualityIcons";
+import lamp from "../public/assets/icons/qualites/lamp.svg";
+import rocket from "../public/assets/icons/qualites/rocket.svg";
+import screen from "../public/assets/icons/qualites/screen.svg";
+import speed from "../public/assets/icons/qualites/speed.svg";
+
 export default function Propos() {
     gsap.registerPlugin(ScrollTrigger);
 
     const title_ref = useRef(null);
-	 const bottom_line_ref = useRef(null);
+    const bottom_line_ref = useRef(null);
 
     const imgRef1 = useRef(null);
     const imgRef2 = useRef(null);
@@ -22,10 +29,9 @@ export default function Propos() {
     const imgRef8 = useRef(null);
 
     useEffect(() => {
-
-		gsap.fromTo(
-			title_ref.current,
-			{ opacity: 0, x: -300 },
+        gsap.fromTo(
+            title_ref.current,
+            { opacity: 0, x: -300 },
 
             {
                 scrollTrigger: {
@@ -37,10 +43,10 @@ export default function Propos() {
                 opacity: 1,
                 delay: 0,
             }
-		)
-		gsap.fromTo(
-			bottom_line_ref.current,
-			{ opacity: 0, x: -200 },
+        );
+        gsap.fromTo(
+            bottom_line_ref.current,
+            { opacity: 0, x: -200 },
 
             {
                 scrollTrigger: {
@@ -51,13 +57,8 @@ export default function Propos() {
                 x: 0,
                 opacity: 1,
                 delay: 0.5,
-               
             }
-		)
-
-
-
-
+        );
 
         gsap.fromTo(
             imgRef1.current,
@@ -174,9 +175,21 @@ export default function Propos() {
 
     return (
         <div className={css.propos_container}>
+            <div className={css.qualityIcons_container}>
+                <QualityIcon value={qualityIcons[0]} url={lamp} />
+                <QualityIcon value={qualityIcons[1]} url={rocket} />
+                <QualityIcon value={qualityIcons[2]} url={screen} />
+                <QualityIcon value={qualityIcons[3]} url={speed} />
+            </div>
+
             <div className={css.propos_title_container}>
-                <h1 ref={title_ref} className={css.propos_title}>A propos</h1>
-                <div ref={bottom_line_ref} className={css.propos_bottom_border}></div>
+                <h1 ref={title_ref} className={css.propos_title}>
+                    A propos
+                </h1>
+                <div
+                    ref={bottom_line_ref}
+                    className={css.propos_bottom_border}
+                ></div>
             </div>
             <p className={css.propos_txt}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -204,7 +217,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[1].name}
                     />
-                     <p className={css.icon_subtitle_item}>css</p>
+                    <p className={css.icon_subtitle_item}>css</p>
                 </div>
 
                 <div ref={imgRef3} className={css.icon_item}>
@@ -214,7 +227,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[2].name}
                     />
-                     <p className={css.icon_subtitle_item}>javascript</p>
+                    <p className={css.icon_subtitle_item}>javascript</p>
                 </div>
 
                 <div ref={imgRef4} className={css.icon_item}>
@@ -224,7 +237,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[3].name}
                     />
-                     <p className={css.icon_subtitle_item}>react js</p>
+                    <p className={css.icon_subtitle_item}>react js</p>
                 </div>
 
                 <div ref={imgRef5} className={css.icon_item}>
@@ -234,7 +247,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[4].name}
                     />
-                     <p className={css.icon_subtitle_item}>next js</p>
+                    <p className={css.icon_subtitle_item}>next js</p>
                 </div>
 
                 <div ref={imgRef6} className={css.icon_item}>
@@ -244,7 +257,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[5].name}
                     />
-                     <p className={css.icon_subtitle_item}>firebase</p>
+                    <p className={css.icon_subtitle_item}>firebase</p>
                 </div>
 
                 <div ref={imgRef7} className={css.icon_item}>
@@ -254,7 +267,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[6].name}
                     />
-                     <p className={css.icon_subtitle_item}>sass</p>
+                    <p className={css.icon_subtitle_item}>sass</p>
                 </div>
 
                 <div ref={imgRef8} className={css.icon_item}>
@@ -264,7 +277,7 @@ export default function Propos() {
                         height={100}
                         alt={icons[7].name}
                     />
-                     <p  className={css.icon_subtitle_item}>greensock</p>
+                    <p className={css.icon_subtitle_item}>greensock</p>
                 </div>
             </div>
         </div>
