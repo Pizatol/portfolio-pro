@@ -45,12 +45,48 @@
 
 .title {
   font-family: --text;
-  font-size: 80px;
-  border: 1px solid var(--black);
-  border-radius: 50%;
-  padding: 10px;
-  background-color: var(--black);
+  font-size: 20px;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: var(--white);
+}
+
+.title h1, .title h3 {
+  text-align: center;
+  font-family: var(--raleway);
+  font-weight: 500;
+  margin: 0;
+}
+
+.title h1 {
+  font-size: 50px;
+}
+
+.title h3 {
+  font-size: 40px;
+}
+
+.title span {
+  color: var(--bleu);
+}
+
+.title a {
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px solid var(--white);
+  padding: 10px 15px;
 }
 
 .navbar {

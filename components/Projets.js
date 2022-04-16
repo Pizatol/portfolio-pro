@@ -1,8 +1,11 @@
 
-import React, {useRef, useEffect} from 'react'
+import React, {useRef, useEffect, useContext} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import css from '../styles/Projets.module.scss'
+
+import { ModalProvider } from '../context/Context'
+import { Context } from '../context/Context'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -14,9 +17,13 @@ import smoke from "../public/assets/projetsImg/smoke.jpg";
 import snake from "../public/assets/projetsImg/snake.png";
 import space from "../public/assets/projetsImg/space.jpg";
 
+
+
 export default function Projets() {
 	gsap.registerPlugin(ScrollTrigger);
 
+    const {modal, setModal} = useContext(Context)
+    
 
 	const projet_title_Ref = useRef(null);
 	const projet_bottom_border_Ref = useRef(null);
@@ -24,7 +31,7 @@ export default function Projets() {
 	useEffect(() => {
 		gsap.fromTo(
 			projet_title_Ref.current,
-			 { opacity: 0, x: -300 },
+			 { opacity: 0, x: 300 },
 
 			 {
 				  scrollTrigger: {
@@ -39,7 +46,7 @@ export default function Projets() {
 		);
 		gsap.fromTo(
 			 projet_bottom_border_Ref.current,
-			 { opacity: 0, x: -200 },
+			 { opacity: 0, x: 300 , rotateY:90 },
 
 			 {
 				  scrollTrigger: {
@@ -48,8 +55,9 @@ export default function Projets() {
 						toggleActions: "play none none none",
 				  },
 				  x: 0,
+                  rotateY : 0,
 				  opacity: 1,
-				  delay: 0.5,
+				  delay: 0.3,
 				  // duration : .75
 			 }
 		);

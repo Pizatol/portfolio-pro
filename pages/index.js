@@ -16,6 +16,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import middleImg from "../public/assets/middleImg.jpg";
 import bottomImg from "../public/assets/bottomImg.jpg";
+import Navbar from "../components/Navbar";
 
 
 
@@ -50,21 +51,20 @@ export default function Home() {
                     {/* navbar */}
 
                     <div className={css.navbarContainer}>
-                        <div id="top" className={css.title}>GB</div>
-
-                        <div className={css.navbar}>
-                            <a href="#projets" >projets.</a>
-
-                            <a href="#propos">à propos</a>
-
-                            <a href="#contact">contact.</a>
+                        <div id="top" className={css.title}>
+                            <h1>Hello, I'm <span>Guillaume Belmonte.</span></h1>                         
+                            <h3>I'm a front-end web developer.</h3>
+                            <a href="#propos" > View my work </a>
                         </div>
+
+                
                     </div>
                 </div>
             </header>
+        {/* navbar */}
+            <Navbar/>
 
             {/* PROPOS */}
-            
             <div id="propos">
             <Propos  />
             </div>
