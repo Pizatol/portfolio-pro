@@ -339,7 +339,7 @@ export default function Propos() {
         <div className={css.propos_global_container}>
             <div className={css.propos_title_container}>
                 <h1 ref={title_ref} className={css.propos_title}>
-                    About me
+                    ABOUT ME
                 </h1>
                 <div
                     ref={bottom_line_ref}

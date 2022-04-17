@@ -8,29 +8,21 @@ import Rellax from "rellax";
 import Propos from "../components/Propos";
 import Projets from "../components/Projets";
 import Contact from "../components/Contact";
-
+import Navbar from "../components/Navbar";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
 import middleImg from "../public/assets/middleImg.jpg";
 import bottomImg from "../public/assets/bottomImg.jpg";
-import Navbar from "../components/Navbar";
-
-
-
+import arrow from "../public/assets/icons/arrow_right.svg";
 
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
-   
     // SCROLL TRIGGERS
     const imgHeadRef = useRef();
- 
 
-
-  
     return (
         <div className={css.globalContainer}>
             <Head>
@@ -43,6 +35,7 @@ export default function Home() {
             </Head>
 
             <header>
+            <div className={css.overlay}></div>
                 {/* header */}
 
                 <div className={css.headerContainer}>
@@ -52,21 +45,32 @@ export default function Home() {
 
                     <div className={css.navbarContainer}>
                         <div id="top" className={css.title}>
-                            <h1>Hello, I'm <span>Guillaume Belmonte.</span></h1>                         
-                            <h3>I'm a front-end web developer.</h3>
-                            <a href="#propos" > View my work </a>
+                            <h1>
+                                Hello, I&apos;m <span>Guillaume Belmonte.</span>
+                            </h1>
+                            <h3>I&apos;m a front-end web developer.</h3>
+                            <a href="#propos">                                
+                                View my work
+                                <span>
+                               
+                                    <Image
+                                        src={arrow}
+                                        width={18}
+                                        height={18}
+                                        alt="flèche"
+                                    />
+                                </span>
+                            </a>
                         </div>
-
-                
                     </div>
                 </div>
             </header>
-        {/* navbar */}
-            <Navbar/>
+            {/* navbar */}
+            <Navbar />
 
             {/* PROPOS */}
             <div id="propos">
-            <Propos  />
+                <Propos />
             </div>
 
             {/* middle bar */}
@@ -74,21 +78,19 @@ export default function Home() {
                 <div className={css.middleImg}>
                     <Image
                         src={middleImg}
-                        width={4272 }
-                        height={1529 }
+                        width={4272}
+                        height={1529}
                         alt="image milieu"
                         layout="responsive"
                     />
                 </div>
             </div>
 
-        {/* PROJETS */}
-        <div id="projets">
+            {/* PROJETS */}
+            <div id="projets">
+                <Projets />
+            </div>
 
-        <Projets/>
-        </div>
-
-       
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
@@ -104,9 +106,7 @@ export default function Home() {
             </div>
 
             {/* CONTACT */}
-            <Contact/>
-
-          
+            <Contact />
         </div>
     );
 }

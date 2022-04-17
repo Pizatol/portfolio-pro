@@ -1,16 +1,48 @@
 .contact_container {
   height: auto;
-  width: 70%;
-  margin: 0 auto 150px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 150px;
+  background-color: var(--black);
+}
+
+.contact_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact_header p {
+  font-family: var(--raleway);
+  color: var(--bleu);
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .contact_title {
   text-align: center;
   font-family: var(--raleway);
-  font-size: 70px;
-  color: var(--black);
+  font-size: 50px;
+  color: var(--white);
   margin: 30px 0;
   font-weight: 400;
+}
+
+.projet_bottom_border {
+  border-bottom: 4px solid var(--white);
+  height: 4px;
+  width: 160px;
+  margin-bottom: 40px;
 }
 
 .form {
@@ -33,18 +65,20 @@
 
 .input_small,
 .input_big {
-  margin: 20px auto;
-  width: 400px;
+  margin: 5px auto;
+  width: 500px;
   border: none;
-  border-bottom: 1px solid black;
-  padding: 20px 0;
-  font-size: 20px;
+  height: 40px;
+  padding: 20px 0 20px 10px;
+  font-size: 16px;
+  font-family: var(--raleway);
+  font-weight: 500;
   color: var(--black);
-  font-family: var(--text);
+  background-color: #333;
 }
 
 .input_big {
-  height: 80px;
+  height: 150px;
 }
 
 .btn_submit {
@@ -57,44 +91,21 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
-  height: 50px;
-  position: relative;
-  margin: 50px auto 0;
-  font-family: var(--text);
-  font-size: 22px;
-  color: var(--black);
-  border: 1px solid #fb8c00;
-  border-radius: 5px;
-  background-color: #fb8c00;
-  -webkit-box-shadow: 0 0 0 0 #ffcc80 inset;
-          box-shadow: 0 0 0 0 #ffcc80 inset;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-}
-
-.btn_submit::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #ffcc80;
-  border-radius: 5px;
+  margin-top: 20px;
+  width: 150px;
+  height: 45px;
+  border: 2px solid var(--white);
+  background-color: #333;
+  color: var(--white);
+  font-family: var(--raleway);
+  font-size: 18px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 .btn_submit:hover {
-  -webkit-box-shadow: 0 0 50px -10px #ffffff inset;
-          box-shadow: 0 0 50px -10px #ffffff inset;
-}
-
-.btn_submit:hover::before {
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
-  width: 150%;
-  height: 190%;
-  border: 1px solid transparent;
+  background-color: var(--bleu);
+  border: 2px solid var(--bleu);
 }
 
 .form_span {

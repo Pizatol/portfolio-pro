@@ -5,6 +5,30 @@
     height: auto;
 }
 
+// overlay
+
+// .overlay {
+//     width: 0%;
+//     height: 100%;
+//     position: absolute;
+//     z-index: 50;
+//     background: black;
+//     animation-duration: 0.9s;
+//     animation-timing-function: ease-in;
+//     animation-name: loade;
+
+// }
+
+// @keyframes loade {
+//     0% {
+//         width: 100vw;
+//         right: 0;
+//     }
+//     100% {
+//         width: 0%;
+//         right: 100%;
+//     }
+// }
 
 //  ********* HEADER *********
 
@@ -33,45 +57,64 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height:auto;
+    height: auto;
     padding-top: 70px;
     margin: auto;
 }
 
 .title {
     font-family: --text;
-    font-size: 20px;   
+    font-size: 20px;
     margin-top: 100px;
-    display:flex;
+    display: flex;
     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-   
+    justify-content: center;
+    flex-direction: column;
+
     color: var(--white);
 
-    h1, h3 {
+    h1,
+    h3 {
         text-align: center;
         font-family: var(--raleway);
         font-weight: 500;
         margin: 0;
     }
     h1 {
-        font-size: 50px;  
+        font-size: 50px;
     }
-
 
     h3 {
-        font-size: 40px;  
+        font-size: 40px;
     }
-    
+
     span {
         color: var(--bleu);
     }
     a {
-        margin-top: 20px;
+        position: relative;
+        margin-top: 40px;
         cursor: pointer;
+        font-size: 20px;
+        font-family: var(--raleway);
         border: 1px solid var(--white);
-        padding: 10px 15px;
+        padding: 20px 20px;
+        transition: all 0.6s ease;
+
+        span {
+            margin-left: 10px;
+            transition: all 0.4s ease;
+        }
+    }
+    a:hover {
+        color: var(--white);
+        background-color: var(--bleu);
+        border: 1px solid var(--bleu);
+        border-radius: 5px;
+
+        span {
+            transform: rotateZ(90deg);
+        }
     }
 }
 
@@ -85,14 +128,11 @@
     margin-top: 30px;
 
     a {
-      color: white;
-      cursor: pointer;
-      scroll-behavior: smooth;
+        color: white;
+        cursor: pointer;
+        scroll-behavior: smooth;
     }
-
 }
-
-
 
 //  IMAGE MIDDLE
 
@@ -104,16 +144,12 @@
     overflow: hidden;
 }
 .middleImg {
-
-  
     position: absolute;
     top: -50%;
     width: 100%;
     height: 100vh;
     z-index: 4;
-
 }
-
 
 // Bottom Bar
 
@@ -125,7 +161,6 @@
     overflow: hidden;
 }
 .bottomImg {
-    
     position: absolute;
 
     width: 100%;
@@ -214,4 +249,3 @@
     font-size: 18px;
     color: #2196f3;
 }
-

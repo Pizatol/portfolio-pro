@@ -1,90 +1,134 @@
-
 // CONTACT
 .contact_container {
-	height: auto;
-	width: 70%;
-	margin: 0 auto 150px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    background-color: var(--black);
+}
+.contact_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+        font-family: var(--raleway);
+        color: var(--bleu);
+        font-size: 19px;
+        font-weight: 600;
+    }
 }
 .contact_title {
-	text-align: center;
-	font-family: var(--raleway);
-	font-size: 70px;
-	color: var(--black);
-	margin: 30px 0;
-	font-weight: 400;
+    text-align: center;
+    font-family: var(--raleway);
+    font-size: 50px;
+    color: var(--white);
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+.projet_bottom_border {
+    border-bottom: 4px solid var(--white);
+    height: 4px;
+    width: 160px;
+	 margin-bottom: 40px;
 }
 
 // FORM
 
 .form {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px 0;
 
-	width: 500px;
+    width: 500px;
 
-	input:focus,
-	textarea:focus {
-		 outline: none;
-	}
+    input:focus,
+    textarea:focus {
+        outline: none;
+    }
 }
 .input_small,
 .input_big {
-	margin: 20px auto;
-	width: 400px;
-	border: none;
-	border-bottom: 1px solid black;
-	padding: 20px 0;
-	font-size: 20px;
-	color: var(--black);
-	font-family: var(--text);
+    margin: 5px auto;
+    width: 500px;
+    border: none;
+    height: 40px;
+    padding: 20px 0 20px 10px;
+    font-size: 16px;
+	 font-family: var(--raleway);
+	 font-weight: 500;
+    color: var(--black);
+    background-color: #333;
+  
 }
 .input_big {
-	height: 80px;
+    height: 150px;
 }
 
 .btn_submit {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 170px;
-	height: 50px;
-	position: relative;
-	margin: 50px auto 0;
-	font-family: var(--text);
-	font-size: 22px;
-	color: var(--black);
-	border: 1px solid #fb8c00;
-	border-radius: 5px;
-	background-color: #fb8c00;
-	box-shadow: 0 0 0 0 #ffcc80 inset;
-	transition: box-shadow 0.4s ease;
-}
-
-.btn_submit::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border: 1px solid #ffcc80;
-	border-radius: 5px;
+    display:flex;
+    align-items: center;
+     justify-content: center;
+     margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    border: 2px solid var(--white);
+    background-color: #333;
+    color: var(--white);
+    font-family: var(--raleway);
+    font-size: 18px;
+    transition: all .4s ease;
 }
 .btn_submit:hover {
-	box-shadow: 0 0 50px -10px #ffffff inset;
-}
-.btn_submit:hover::before {
-	transition: all 0.6s ease;
-	width: 150%;
-	height: 190%;
-	border: 1px solid transparent;
+    background-color: var(--bleu);
+    border: 2px solid var(--bleu);
+    // color: #333;
+    // font-weight: bold;
 }
 
+// .btn_submit {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 170px;
+//     height: 50px;
+//     position: relative;
+//     margin: 50px auto 0;
+ 
+//     color: #333;
+//     border: 1px solid #fb8c00;
+//     border-radius: 5px;
+//     background-color: #fb8c00;
+//     box-shadow: 0 0 0 0 #ffcc80 inset;
+//     transition: box-shadow 0.4s ease;
+// }
+
+// .btn_submit::before {
+//     content: "";
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     border: 1px solid #ffcc80;
+//     border-radius: 5px;
+// }
+// .btn_submit:hover {
+//     box-shadow: 0 0 50px -10px #ffffff inset;
+// }
+// .btn_submit:hover::before {
+//     transition: all 0.6s ease;
+//     width: 150%;
+//     height: 190%;
+//     border: 1px solid transparent;
+// }
+
 .form_span {
-	// border: 1px solid red;
-	height: 20px;
-	text-align: center;
-	font-family: var(--text);
-	font-size: 18px;
-	color: #2196f3;
+    // border: 1px solid red;
+    height: 20px;
+    text-align: center;
+    font-family: var(--text);
+    font-size: 18px;
+    color: #2196f3;
 }
