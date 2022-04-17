@@ -18,13 +18,13 @@ export default function ProjetCard(props) {
 						 </Link>
 
                 </div>
-                <Image
+                {/* <Image
                     src={props.value.img}
                     width={500}
                     height={300}
                     alt={props.value.name}
 						  layout='responsive'
-                />
+                /> */}
             </div>
         </div>
     );
