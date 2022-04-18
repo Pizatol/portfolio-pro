@@ -1,24 +1,24 @@
 .globalContainer {
   position: relative;
   width: 100vw;
+  max-width: 1900px;
+  margin: auto;
   height: auto;
 }
 
 .headerContainer {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: transparent;
 }
 
 .imgHeader {
-  position: absolute;
-  background: url("../public/assets/headerImg.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  position: fixed;
+  overflow: hidden;
   width: 100%;
   height: 100vh;
-  z-index: 2;
+  z-index: 1;
 }
 
 .navbarContainer {
@@ -159,10 +159,10 @@
 }
 
 .bottomImg {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
-  z-index: 4;
+  height: 100%;
+  z-index: 3;
 }
 
 .contactContainer {

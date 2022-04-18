@@ -162,7 +162,7 @@ export default function Projets() {
                         scrollTrigger: {
                             trigger: pro6_Ref.current,
                             start: "top 80%",
-                            markers: true,
+                            
                             toggleActions: "play none none none",
                         },
                         x: 0,

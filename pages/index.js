@@ -3,7 +3,6 @@ import css from "../styles/Home.module.scss";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Rellax from "rellax";
 
 import Propos from "../components/Propos";
 import Projets from "../components/Projets";
@@ -11,17 +10,36 @@ import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 
 import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
+
+import headerImg from '../public/assets/headerImg.jpg';
 import middleImg from "../public/assets/middleImg.jpg";
 import bottomImg from "../public/assets/bottomImg.jpg";
 import arrow from "../public/assets/icons/arrow_right.svg";
+
 
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
 
     // SCROLL TRIGGERS
     const imgHeadRef = useRef();
+    const img_bottom_Ref = useRef(null);
+
+    var rellax = new Rellax(img_bottom_Ref.current, {
+        speed: -2,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+      });
+
+    useEffect(() => {
+            
+     
+    }, [])
 
     return (
         <div className={css.globalContainer}>
@@ -39,7 +57,14 @@ export default function Home() {
                 {/* header */}
 
                 <div className={css.headerContainer}>
-                    <div className={css.imgHeader}></div>
+                    <div className={css.imgHeader}>
+                    <Image 
+                        src={headerImg}
+                        alt="image en tête"
+                        layout="responsive"
+                    />
+
+                    </div>
 
                     {/* navbar */}
 
@@ -94,13 +119,13 @@ export default function Home() {
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
-                <div className={css.bottomImg}>
+                <div ref={img_bottom_Ref} className={css.bottomImg}>
                     <Image
                         src={bottomImg}
                         width={2395}
                         height={970}
                         alt="image bottom"
-                        layout="fixed"
+                        layout="responsive"
                     />
                 </div>
             </div>
