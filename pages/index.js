@@ -27,14 +27,7 @@ export default function Home() {
     const imgHeadRef = useRef();
     const img_bottom_Ref = useRef(null);
 
-    var rellax = new Rellax(img_bottom_Ref.current, {
-        speed: -2,
-        center: false,
-        wrapper: null,
-        round: true,
-        vertical: true,
-        horizontal: false
-      });
+ 
 
     useEffect(() => {
             
