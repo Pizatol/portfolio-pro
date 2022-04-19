@@ -8,10 +8,12 @@ import Propos from "../components/Propos";
 import Projets from "../components/Projets";
 import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-import { gsap } from "gsap";
+import { gsap } from "gsap/dist/gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Parallax } from "react-parallax";
 
 import headerImg from "../public/assets/headerImg.jpg";
 import middleImg from "../public/assets/middleImg.jpg";
@@ -19,11 +21,24 @@ import bottomImg from "../public/assets/bottomImg.jpg";
 import arrow from "../public/assets/icons/arrow_right.svg";
 
 export default function Home() {
+    // gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollSmoother);
+
+    // SCROLL SMOOTHER
+    const bottom_bar_content_Ref = useRef(null);
+    const bottom_bar_wrapper_Ref = useRef(null);
+
+    // let smoother = ScrollSmoother.create({
+    //     wrapper : "#smooth-wrapper",
+    //     content : '#smooth-content'
+    // })
 
     // SCROLL TRIGGERS
     const imgHeadRef = useRef();
     const img_bottom_Ref = useRef(null);
+
+    const middle_bar_Ref = useRef(null);
 
     useEffect(() => {}, []);
 
@@ -78,44 +93,49 @@ export default function Home() {
             <Navbar />
 
             {/* PROPOS */}
-            <div id="propos">
+            <div  id="propos" className={css.propos_container}>
                 <Propos />
             </div>
 
             {/* middle bar */}
             <div className={css.middleBar}>
-                <div className={css.middleImg}>
-                    <Image
+                <div ref={bottom_bar_content_Ref} className={css.middleImg}>
+                    {/* <Image
                         src={middleImg}
                         width={4272}
                         height={1529}
                         alt="image milieu"
                         layout="responsive"
-                    />
+                    /> */}
                 </div>
             </div>
 
             {/* PROJETS */}
-            <div id="projets">
+            <div className={css.projets_container}>
                 <Projets />
             </div>
 
             {/* bottom bar */}
 
             <div className={css.bottomBar}>
-                <div ref={img_bottom_Ref} className={css.bottomImg}>
-                    <Image
+                <div className={css.bottomImg}>
+                    {/* <Image
                         src={bottomImg}
                         width={2395}
                         height={970}
                         alt="image bottom"
                         layout="responsive"
-                    />
+                    /> */}
                 </div>
             </div>
 
             {/* CONTACT */}
+            <div id="contact"></div>
             <Contact />
+
+            {/* FOOTER */}
+            <Footer/>
+
         </div>
     );
 }

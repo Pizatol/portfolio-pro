@@ -176,12 +176,12 @@ export default function Contact() {
     };
 
     return (
-        <div>
-            <div id="contact" className={css.contact_container}>
+        <div >
+            <div  className={css.contact_container}>
                 <div className={css.contact_header}>
                     <div>
                         <h1
-                            id="contact"
+                            
                             ref={title_ref}
                             className={css.contact_title}
                         >
