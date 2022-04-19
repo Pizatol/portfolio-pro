@@ -61,6 +61,7 @@ export default function Projets() {
                     trigger: projet_bottom_border_Ref.current,
                     start: "top 75%",
                     toggleActions: "play none none none",
+               
                 },
                 x: 0,
                 rotateY: 0,
