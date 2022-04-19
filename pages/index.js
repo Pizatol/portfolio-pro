@@ -13,12 +13,10 @@ import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-
-import headerImg from '../public/assets/headerImg.jpg';
+import headerImg from "../public/assets/headerImg.jpg";
 import middleImg from "../public/assets/middleImg.jpg";
 import bottomImg from "../public/assets/bottomImg.jpg";
 import arrow from "../public/assets/icons/arrow_right.svg";
-
 
 export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
@@ -27,12 +25,7 @@ export default function Home() {
     const imgHeadRef = useRef();
     const img_bottom_Ref = useRef(null);
 
- 
-
-    useEffect(() => {
-            
-     
-    }, [])
+    useEffect(() => {}, []);
 
     return (
         <div className={css.globalContainer}>
@@ -46,17 +39,16 @@ export default function Home() {
             </Head>
 
             <header>
-            <div className={css.overlay}></div>
+                <div className={css.overlay}></div>
                 {/* header */}
 
                 <div className={css.headerContainer}>
                     <div className={css.imgHeader}>
-                    <Image 
-                        src={headerImg}
-                        alt="image en tête"
-                        layout="responsive"
-                    />
-
+                        <Image
+                            src={headerImg}
+                            alt="image en tête"
+                            layout="responsive"
+                        />
                     </div>
 
                     {/* navbar */}
@@ -67,10 +59,9 @@ export default function Home() {
                                 Hello, I&apos;m <span>Guillaume Belmonte.</span>
                             </h1>
                             <h3>I&apos;m a front-end web developer.</h3>
-                            <a href="#propos">                                
+                            <a href="#propos">
                                 View my work
                                 <span>
-                               
                                     <Image
                                         src={arrow}
                                         width={18}
