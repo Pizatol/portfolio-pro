@@ -4,8 +4,10 @@
   height: auto;
   width: 100%;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding: 50px 0 150px;
   background-color: var(--black);
+  border-top: 2px solid var(--bleu);
+  border-bottom: 2px solid var(--bleu);
 }
 
 .contact_header {

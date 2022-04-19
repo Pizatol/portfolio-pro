@@ -1,0 +1,33 @@
+.footer_container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 250px;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.text {
+  text-align: center;
+  font-family: var(--raleway);
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--white);
+}
+
+.text span {
+  color: var(--bleu);
+}
+/*# sourceMappingURL=Footer.module.css.map */

@@ -5,6 +5,8 @@
   width: 100%;
   padding-bottom: 100px;
   background-color: var(--white);
+  border-top: 2px solid var(--bleu);
+  border-bottom: 2px solid var(--bleu);
 }
 
 .projet_title_container {
