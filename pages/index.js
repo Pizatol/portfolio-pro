@@ -10,10 +10,9 @@ import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import { gsap } from "gsap/dist/gsap";
-
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Parallax } from "react-parallax";
+
 
 import headerImg from "../public/assets/headerImg.jpg";
 import middleImg from "../public/assets/middleImg.jpg";
@@ -23,24 +22,11 @@ import arrow from "../public/assets/icons/arrow_right.svg";
 export default function Home() {
     // gsap.registerPlugin(ScrollTrigger);
     gsap.registerPlugin(ScrollTrigger);
-    // gsap.registerPlugin(ScrollSmoother);
+   
 
-    // SCROLL SMOOTHER
-    const bottom_bar_content_Ref = useRef(null);
-    const bottom_bar_wrapper_Ref = useRef(null);
+ 
 
-    // let smoother = ScrollSmoother.create({
-    //     wrapper : "#smooth-wrapper",
-    //     content : '#smooth-content'
-    // })
-
-    // SCROLL TRIGGERS
-    const imgHeadRef = useRef();
-    const img_bottom_Ref = useRef(null);
-
-    const middle_bar_Ref = useRef(null);
-
-    useEffect(() => {}, []);
+ 
 
     return (
         <div className={css.globalContainer}>
@@ -99,7 +85,7 @@ export default function Home() {
 
             {/* middle bar */}
             <div className={css.middleBar}>
-                <div ref={bottom_bar_content_Ref} className={css.middleImg}>
+                <div  className={css.middleImg}>
                     {/* <Image
                         src={middleImg}
                         width={4272}
