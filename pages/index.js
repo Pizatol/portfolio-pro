@@ -86,13 +86,7 @@ export default function Home() {
             {/* middle bar */}
             <div className={css.middleBar}>
                 <div  className={css.middleImg}>
-                    {/* <Image
-                        src={middleImg}
-                        width={4272}
-                        height={1529}
-                        alt="image milieu"
-                        layout="responsive"
-                    /> */}
+                  
                 </div>
             </div>
 
@@ -105,13 +99,7 @@ export default function Home() {
 
             <div className={css.bottomBar}>
                 <div className={css.bottomImg}>
-                    {/* <Image
-                        src={bottomImg}
-                        width={2395}
-                        height={970}
-                        alt="image bottom"
-                        layout="responsive"
-                    /> */}
+                   
                 </div>
             </div>
 
