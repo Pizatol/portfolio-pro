@@ -25,9 +25,16 @@
   font-size: 12px;
   font-weight: 200;
   color: var(--white);
+  padding-bottom: 10px;
 }
 
 .text span {
   color: var(--bleu);
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.logo_item a {
+  padding: 0px 15px;
 }
 /*# sourceMappingURL=Footer.module.css.map */

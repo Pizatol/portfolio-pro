@@ -13,13 +13,13 @@ export default function Footer() {
 	 <div className={css.footer_container}>
 
 			<div className={css.logo_container}>
-				<div>
-					<Link href="#">
+				<div className={css.logo_item}>
+					<Link href="https://www.linkedin.com/in/guillaume-belmonte-bb9098239/">
 					<a target="_blank">
 					<Image 
 						src={linkImg}
-						width={40}
-						height={40}
+						width={50}
+						height={50}
 						alt="logo linkedIn"
 					/>
 					</a>
@@ -30,8 +30,8 @@ export default function Footer() {
 
 					<Image 
 						src={githubImg}
-						width={40}
-						height={40}
+						width={50}
+						height={50}
 						alt="logo linkedIn"
 					/>
 						</a>
