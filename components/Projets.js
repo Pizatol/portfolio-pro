@@ -18,6 +18,9 @@ import memory from "../public/assets/projetsImg/memory.png";
 import hiroko from "../public/assets/projetsImg/siteHiroko.png";
 import snake from "../public/assets/projetsImg/snake.png";
 import smoke from "../public/assets/projetsImg/smoke.jpg";
+import typing from '../public/assets/projetsImg/typing.png';
+import audio from '../public/assets/projetsImg/audio.png';
+import meteo from '../public/assets/projetsImg/meteo.png';
 
 export default function Projets() {
     gsap.registerPlugin(ScrollTrigger);
@@ -32,6 +35,9 @@ export default function Projets() {
     const pro4_Ref = useRef(null)
     const pro5_Ref = useRef(null)
     const pro6_Ref = useRef(null)
+    const pro7_Ref = useRef(null)
+    const pro8_Ref = useRef(null)
+    const pro9_Ref = useRef(null)
 
 
     useEffect(() => {
@@ -157,14 +163,14 @@ export default function Projets() {
                   // projet item 6
                   gsap.fromTo(
                     pro6_Ref.current,
-                    {opacity: 0, y:100, x:50 },
+                    {opacity: 0, y:50, x:50 },
         
                     {
                         scrollTrigger: {
                             trigger: pro6_Ref.current,
-                            start: "top 80%",
-                            
+                            start: "top 80%",                            
                             toggleActions: "play none none none",
+                          
                         },
                         x: 0,
                         y: 0,
@@ -172,7 +178,60 @@ export default function Projets() {
                         delay: 0.5,
                     }
                 );
-
+                    // projet item 7
+                    gsap.fromTo(
+                        pro7_Ref.current,
+                        {opacity: 0, y:0, x:-150 },
+            
+                        {
+                            scrollTrigger: {
+                                trigger: pro7_Ref.current,
+                                start: "top 95%",
+                                
+                                toggleActions: "play none none none",
+                            },
+                            x: 0,
+                            y: 0,
+                            opacity: 1,
+                            delay: 0.5,
+                        }
+                    );
+                    // projet item 8
+                    gsap.fromTo(
+                        pro8_Ref.current,
+                        {opacity: 0, y:100, x:50 },
+            
+                        {
+                            scrollTrigger: {
+                                trigger: pro8_Ref.current,
+                                start: "top 95%",
+                                
+                                toggleActions: "play none none none",
+                            },
+                            x: 0,
+                            y: 0,
+                            opacity: 1,
+                            delay: 0,
+                        }
+                    );
+                     // projet item 9
+                    gsap.fromTo(
+                        pro9_Ref.current,
+                        {opacity: 0, y:-100, x:50 },
+            
+                        {
+                            scrollTrigger: {
+                                trigger: pro9_Ref.current,
+                                start: "top 95%",
+                                
+                                toggleActions: "play none none none",
+                            },
+                            x: 0,
+                            y: 0,
+                            opacity: 1,
+                            delay: 0.5,
+                        }
+                    );
     }, []);
 
   
@@ -193,6 +252,7 @@ export default function Projets() {
                 </div>
 
                 <div className={css.projet_grid}>
+                
                     {/* smoke spot 1 */}
                     <div ref={pro1_Ref} className={css.card_container}>
                         <div className={css.img_card}>
@@ -309,6 +369,70 @@ export default function Projets() {
                             />
                         </div>
                     </div>
+                    {/* Typing 7 */}
+                    <div ref={pro7_Ref} className={css.card_container}>
+                        <div className={css.img_card}>
+                            <div className={css.overlay}>
+                                <h3>Typing Exercice</h3>
+                                <h4> Javascript</h4>
+                                <Link href="https://typing-app-orcin.vercel.app/">
+                                    <a target="_blank"> SEE MORE</a>
+                                </Link>
+                            </div>
+                            <Image
+                                src={typing}
+                                width={500}
+                                height={300}
+                                alt="typing exercice"
+                                layout="responsive"
+                            />
+                        </div>
+                    </div>
+
+                    {/* audio 8 */}
+
+                    <div ref={pro8_Ref} className={css.card_container}>
+                        <div className={css.img_card}>
+                            <div className={css.overlay}>
+                                <h3>Audio Visualizer</h3>
+                                <h4> Javascript</h4>
+                                <Link href="https://visualise-audio.vercel.app/">
+                                    <a target="_blank"> SEE MORE</a>
+                                </Link>
+                            </div>
+                            <Image
+                                src={audio}
+                                width={500}
+                                height={300}
+                                alt="Audio visualizer"
+                                layout="responsive"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Meteo 9 */}
+
+                    <div ref={pro9_Ref} className={css.card_container}>
+                        <div className={css.img_card}>
+                            <div className={css.overlay}>
+                                <h3>Weather Application</h3>
+                                <h4> Javascript / Nextjs / Api call</h4>
+                                <Link href="https://meteo-react-nine.vercel.app/">
+                                    <a target="_blank"> SEE MORE</a>
+                                </Link>
+                            </div>
+                            <Image
+                                src={meteo}
+                                width={500}
+                                height={300}
+                                alt="Weather application"
+                                layout="responsive"
+                            />
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
