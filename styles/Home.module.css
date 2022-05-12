@@ -99,6 +99,8 @@
   margin-left: 10px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .title a:hover {
@@ -109,8 +111,8 @@
 }
 
 .title a:hover span {
-  -webkit-transform: rotateZ(90deg);
-          transform: rotateZ(90deg);
+  -webkit-transform: rotateZ(90deg) translateX(3px);
+          transform: rotateZ(90deg) translateX(3px);
 }
 
 .navbar {

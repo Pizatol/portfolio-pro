@@ -20,13 +20,62 @@ import bottomImg from "../public/assets/bottomImg.jpg";
 import arrow from "../public/assets/icons/arrow_right.svg";
 
 export default function Home() {
-    // gsap.registerPlugin(ScrollTrigger);
+
     gsap.registerPlugin(ScrollTrigger);
-   
-
  
 
- 
+    const img_header = useRef(null)
+    const title_subtitle_ref = useRef(null)
+    const title_button_ref = useRef(null)
+
+//    img_header.addEventListener('mousemove', e => {
+//     img_header.style.backgroundPositionX = -e.offsetX + "px";
+//     img_header.style.backgroundPositionY = -e.offsetY + "px";
+//    })
+
+    useEffect(() => {
+
+        gsap.fromTo(
+            img_header.current,
+            {  scale:1 },
+            {
+                scrollTrigger: {
+                    trigger: img_header.current,                    
+                    scrub: 2,
+                    start : "top top"
+                    },               
+                scale : 1.2,               
+            })
+
+            gsap.fromTo(
+                title_subtitle_ref.current,
+                {  y:0 },
+                {
+                    scrollTrigger: {
+                        trigger: title_subtitle_ref.current,                    
+                        scrub: 2,
+                        start : "bottom 30%",
+                        end : "bottom 10%",
+                     
+                        },               
+                    y : 250,               
+                })
+
+                // gsap.fromTo(
+                //     title_button_ref.current,
+                //     {  y:0 },
+                //     {
+                //         scrollTrigger: {
+                //             trigger: title_button_ref.current,                    
+                //             scrub: 1.5,
+                //             start : "top 30%",
+                          
+                //             },               
+                //         y : 100,               
+                //     })
+
+    }, [])
+
 
     return (
         <div className={css.globalContainer}>
@@ -45,25 +94,27 @@ export default function Home() {
                 <div className={css.overlay}></div>
                 {/* header */}
 
-                <div className={css.headerContainer}>
-                    <div className={css.imgHeader}>
-                        <Image
+                <div  className={css.headerContainer}>
+                    <div ref={img_header}   className={`${css.imgHeader}`}>
+                        <Image                        
                             src={headerImg}
-                            alt="image en tête"
+                            alt="image en-tête"
                             layout="responsive"
                         />
                     </div>
 
                     {/* navbar */}
 
-                    <div className={css.navbarContainer}>
+                    <div className={css.navbarContainer}  ref={title_subtitle_ref}>
                         <div id="top" className={css.title}>
+                        <div>
                             <h1>
                                 Hello, I&apos;m <span>Guillaume Belmonte.</span>
                             </h1>
                             <h3>I&apos;m a front-end web developer.</h3>
-                            <a href="#propos">
-                                View my work
+                        </div>
+                            <a href="#propos" alt="bouton voir mon travail"  >
+                                About me
                                 <span>
                                     <Image
                                         src={arrow}
