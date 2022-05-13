@@ -47,32 +47,7 @@ export default function Home() {
                 scale : 1.2,               
             })
 
-            gsap.fromTo(
-                title_subtitle_ref.current,
-                {  y:0 },
-                {
-                    scrollTrigger: {
-                        trigger: title_subtitle_ref.current,                    
-                        scrub: 2,
-                        start : "bottom 30%",
-                        end : "bottom 10%",
-                     
-                        },               
-                    y : 250,               
-                })
-
-                // gsap.fromTo(
-                //     title_button_ref.current,
-                //     {  y:0 },
-                //     {
-                //         scrollTrigger: {
-                //             trigger: title_button_ref.current,                    
-                //             scrub: 1.5,
-                //             start : "top 30%",
-                          
-                //             },               
-                //         y : 100,               
-                //     })
+       
 
     }, [])
 
