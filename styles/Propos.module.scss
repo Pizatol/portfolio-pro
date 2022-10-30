@@ -132,9 +132,19 @@
 	align-items: center;
 	height: 150px;
 	margin: 30px;
+	transition: all .3s ease;
 }
+.icon_item:hover {
+	transform: scale(1.2);
+}
+
 .icon_subtitle_item {
 	font-family: var(--raleway);
 	font-weight: 500;
 	font-size: 19px;
+	transition: all .5s ease;
+	color: var(--black);
+	font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
 }

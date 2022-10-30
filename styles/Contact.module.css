@@ -11,21 +11,11 @@
 }
 
 .contact_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
 .contact_header p {
   font-family: var(--raleway);
   color: var(--bleu);
@@ -50,18 +40,12 @@
 }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   padding: 10px 0;
   width: 500px;
 }
-
 .form input:focus,
 .form textarea:focus {
   outline: none;
@@ -86,15 +70,9 @@
 }
 
 .btn_submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   width: 150px;
   height: 45px;
@@ -103,8 +81,7 @@
   color: var(--white);
   font-family: var(--raleway);
   font-size: 18px;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 .btn_submit:hover {
@@ -118,5 +95,4 @@
   font-family: var(--text);
   font-size: 18px;
   color: #2196f3;
-}
-/*# sourceMappingURL=Contact.module.css.map */
+}/*# sourceMappingURL=Contact.module.css.map */

@@ -13,50 +13,31 @@
 
 .overlay {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   z-index: 3;
   width: 100%;
   height: 100%;
   background-color: #F5F5F5;
   opacity: 0;
   font-family: var(--raleway);
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
 .overlay h3 {
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
-  -webkit-transition: all 0.4s ease;
+  transform: translateY(-80px);
   transition: all 0.4s ease;
   font-size: 30px;
 }
-
 .overlay h4 {
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
-  -webkit-transition: all 0.4s ease;
+  transform: translateY(-80px);
   transition: all 0.4s ease;
   color: var(--bleu);
   font-size: 20px;
 }
-
 .overlay a {
-  -webkit-transform: translateY(80px);
-          transform: translateY(80px);
-  -webkit-transition: all 0.4s ease;
+  transform: translateY(80px);
   transition: all 0.4s ease;
   border: 4px solid var(--bleu);
   border-radius: 3px;
@@ -64,7 +45,6 @@
   font-size: 25px;
   font-weight: 500;
 }
-
 .overlay a:hover {
   background-color: var(--bleu);
   color: var(--white);
@@ -73,22 +53,15 @@
 .overlay:hover {
   opacity: 1;
 }
-
 .overlay:hover h3 {
-  -webkit-transform: translateY(-40px);
-          transform: translateY(-40px);
+  transform: translateY(-40px);
   opacity: 1;
 }
-
 .overlay:hover h4 {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
+  transform: translateY(-60px);
   opacity: 1;
 }
-
 .overlay:hover a {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
-}
-/*# sourceMappingURL=ProjetCard.module.css.map */
+}/*# sourceMappingURL=ProjetCard.module.css.map */

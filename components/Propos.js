@@ -428,7 +428,7 @@ export default function Propos() {
             </div>
 
             <div className={css.icon_container}>
-                <div ref={imgRef1} className={css.icon_item}>
+                {/* <div ref={imgRef1} className={css.icon_item}>
                     <Image
                         src={icons[0].url}
                         width={70}
@@ -436,8 +436,8 @@ export default function Propos() {
                         alt={icons[0].name}
                     />
                     <p className={css.icon_subtitle_item}>html</p>
-                </div>
-                <div ref={imgRef2} className={css.icon_item}>
+                </div> */}
+                {/* <div ref={imgRef2} className={css.icon_item}>
                     <Image
                         src={icons[1].url}
                         width={70}
@@ -445,7 +445,7 @@ export default function Propos() {
                         alt={icons[1].name}
                     />
                     <p className={css.icon_subtitle_item}>css</p>
-                </div>
+                </div> */}
 
                 <div ref={imgRef3} className={css.icon_item}>
                     <Image
@@ -487,7 +487,7 @@ export default function Propos() {
                     <p className={css.icon_subtitle_item}>firebase</p>
                 </div>
 
-                <div ref={imgRef7} className={css.icon_item}>
+                {/* <div ref={imgRef7} className={css.icon_item}>
                     <Image
                         src={icons[6].url}
                         width={70}
@@ -495,9 +495,9 @@ export default function Propos() {
                         alt={icons[6].name}
                     />
                     <p className={css.icon_subtitle_item}>sass</p>
-                </div>
+                </div> */}
 
-                <div ref={imgRef8} className={css.icon_item}>
+                {/* <div ref={imgRef8} className={css.icon_item}>
                     <Image
                         src={icons[7].url}
                         width={70}
@@ -505,7 +505,7 @@ export default function Propos() {
                         alt={icons[7].name}
                     />
                     <p className={css.icon_subtitle_item}>greensock</p>
-                </div>
+                </div> */}
             </div>
         </div>
     );

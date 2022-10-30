@@ -5,48 +5,32 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   background-color: #444444;
   border-bottom: 5px solid var(--bleu);
 }
 
 .navbar_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   margin-left: 300px;
   width: 600px;
   height: 100%;
   background-color: transparent;
 }
-
 .navbar_container a {
   font-family: var(--raleway);
   font-weight: 500;
   font-size: 20px;
   color: var(--white);
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
 .navbar_container a:nth-child(1) {
   color: var(--orange);
 }
-
 .navbar_container a:hover {
   color: var(--orange);
-}
-/*# sourceMappingURL=Navbar.module.css.map */
+}/*# sourceMappingURL=Navbar.module.css.map */

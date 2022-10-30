@@ -21,6 +21,7 @@ import smoke from "../public/assets/projetsImg/smoke.jpg";
 import typing from '../public/assets/projetsImg/typing.png';
 import audio from '../public/assets/projetsImg/audio.png';
 import meteo from '../public/assets/projetsImg/meteo.png';
+import fakeEstate from '../public/assets/projetsImg/fakeEstate.JPG'
 
 export default function Projets() {
     gsap.registerPlugin(ScrollTrigger);
@@ -257,14 +258,14 @@ export default function Projets() {
                     <div ref={pro1_Ref} className={css.card_container}>
                         <div className={css.img_card}>
                             <div className={css.overlay}>
-                                <h3>Smoke-Spot </h3>
+                                <h3>Fake Estate </h3>
                                 <h4> Javascript / Leaflet / Reactjs </h4>
-                                <Link href="https://japan-smoke-spot.vercel.app/">
+                                <Link href="https://fake-estate.vercel.app/">
                                     <a target="_blank"> SEE MORE</a>
                                 </Link>
                             </div>
                             <Image
-                                src={smoke}
+                                src={fakeEstate}
                                 width={500}
                                 height={300}
                                 alt="Smoke-Spot"

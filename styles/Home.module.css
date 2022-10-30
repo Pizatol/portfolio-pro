@@ -24,19 +24,10 @@
 .navbarContainer {
   position: relative;
   z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
   padding-top: 70px;
@@ -47,22 +38,12 @@
   font-family: --text;
   font-size: 20px;
   margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: var(--white);
 }
-
 .title h1,
 .title h3 {
   text-align: center;
@@ -70,19 +51,15 @@
   font-weight: 500;
   margin: 0;
 }
-
 .title h1 {
   font-size: 50px;
 }
-
 .title h3 {
   font-size: 40px;
 }
-
 .title span {
   color: var(--bleu);
 }
-
 .title a {
   position: relative;
   margin-top: 40px;
@@ -91,45 +68,32 @@
   font-family: var(--raleway);
   border: 1px solid var(--white);
   padding: 20px 20px;
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
-
 .title a span {
   margin-left: 10px;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  transform: translateY(2px);
 }
-
 .title a:hover {
   color: var(--white);
   background-color: var(--bleu);
   border: 1px solid var(--bleu);
   border-radius: 5px;
 }
-
 .title a:hover span {
-  -webkit-transform: rotateZ(90deg) translateX(3px);
-          transform: rotateZ(90deg) translateX(3px);
+  transform: rotateZ(90deg) translateX(3px);
 }
 
 .navbar {
   width: 80%;
   margin: auto;
   height: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 30px;
 }
-
 .navbar a {
   color: white;
   cursor: pointer;
@@ -188,18 +152,12 @@
 }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
   padding: 10px 0;
   width: 500px;
 }
-
 .form input:focus,
 .form textarea:focus {
   outline: none;
@@ -222,15 +180,9 @@
 }
 
 .btnSubmit {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 170px;
   height: 50px;
   position: relative;
@@ -241,12 +193,8 @@
   border: 1px solid #fb8c00;
   border-radius: 5px;
   background-color: #fb8c00;
-  -webkit-box-shadow: 0 0 0 0 #ffcc80 inset;
-          box-shadow: 0 0 0 0 #ffcc80 inset;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
+  box-shadow: 0 0 0 0 #ffcc80 inset;
   transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
 }
 
 .btnSubmit::before {
@@ -259,12 +207,10 @@
 }
 
 .btnSubmit:hover {
-  -webkit-box-shadow: 0 0 50px -10px #ffffff inset;
-          box-shadow: 0 0 50px -10px #ffffff inset;
+  box-shadow: 0 0 50px -10px #ffffff inset;
 }
 
 .btnSubmit:hover::before {
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
   width: 150%;
   height: 190%;
@@ -277,5 +223,4 @@
   font-family: var(--text);
   font-size: 18px;
   color: #2196f3;
-}
-/*# sourceMappingURL=Home.module.css.map */
+}/*# sourceMappingURL=Home.module.css.map */
