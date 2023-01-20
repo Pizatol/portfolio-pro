@@ -42,6 +42,11 @@ export default function Propos() {
     const quality_txt_Ref3 = useRef(null)
     const quality_txt_Ref4 = useRef(null)
 
+
+
+
+
+
     // useEffect icones techno + titre + bordure
     useEffect(() => {
         gsap.fromTo(
@@ -447,7 +452,7 @@ export default function Propos() {
                     <p className={css.icon_subtitle_item}>css</p>
                 </div> */}
 
-                <div ref={imgRef3} className={css.icon_item}>
+                <div ref={imgRef2} className={css.icon_item}>
                     <Image
                         src={icons[2].url}
                         width={70}
@@ -457,7 +462,7 @@ export default function Propos() {
                     <p className={css.icon_subtitle_item}>javascript</p>
                 </div>
 
-                <div ref={imgRef4} className={css.icon_item}>
+                <div ref={imgRef3} className={css.icon_item}>
                     <Image
                         src={icons[3].url}
                         width={70}
@@ -467,7 +472,7 @@ export default function Propos() {
                     <p className={css.icon_subtitle_item}>react js</p>
                 </div>
 
-                <div ref={imgRef5} className={css.icon_item}>
+                <div ref={imgRef4} className={css.icon_item}>
                     <Image
                         src={icons[4].url}
                         width={70}
@@ -477,7 +482,7 @@ export default function Propos() {
                     <p className={css.icon_subtitle_item}>next js</p>
                 </div>
 
-                <div ref={imgRef6} className={css.icon_item}>
+                <div ref={imgRef5} className={css.icon_item}>
                     <Image
                         src={icons[5].url}
                         width={70}
@@ -486,6 +491,25 @@ export default function Propos() {
                     />
                     <p className={css.icon_subtitle_item}>firebase</p>
                 </div>
+                <div ref={imgRef6} className={css.icon_item}>
+                    <Image
+                        src={icons[8].url}
+                        width={70}
+                        height={70}
+                        alt={icons[8].name}
+                    />
+                    <p className={css.icon_subtitle_item}>node</p>
+                </div>
+                <div ref={imgRef7} className={css.icon_item}>
+                    <Image
+                        src={icons[0].url}
+                        width={70}
+                        height={70}
+                        alt={icons[0].name}
+                    />
+                    <p className={css.icon_subtitle_item}>mongo</p>
+                </div>
+
 
                 {/* <div ref={imgRef7} className={css.icon_item}>
                     <Image
