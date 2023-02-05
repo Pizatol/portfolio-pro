@@ -22,6 +22,7 @@ import typing from '../public/assets/projetsImg/typing.png';
 import audio from '../public/assets/projetsImg/audio.png';
 import meteo from '../public/assets/projetsImg/meteo.png';
 import fakeEstate from '../public/assets/projetsImg/fakeEstate.JPG'
+import snippetBlog from '../public/assets/projetsImg/snippet_blog.png'
 
 export default function Projets() {
     gsap.registerPlugin(ScrollTrigger);
@@ -278,14 +279,15 @@ export default function Projets() {
                     <div ref={pro2_Ref} className={css.card_container}>
                         <div className={css.img_card}>
                             <div className={css.overlay}>
-                                <h3>Amazoun </h3>
-                                <h4> Javascript Nextjs Reactjs </h4>
-                                <Link href="https://eshop-nextjs-one.vercel.app/">
+                                <h3> Snippet Blog </h3>
+                                <h4>  Nextjs MongoDB </h4>
+                                <Link href="https://snippet-blog.vercel.app/">
                                     <a target="_blank"> SEE MORE</a>
                                 </Link>
+                                {/* ******************************************** */}
                             </div>
                             <Image
-                                src={eshop}
+                                src={snippetBlog}
                                 width={500}
                                 height={300}
                                 alt="e-shop"
